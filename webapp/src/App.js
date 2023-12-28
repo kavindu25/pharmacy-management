@@ -9,7 +9,9 @@ import Home from "./pages/home";
 function App() {
   return (
     <div className="">
+      <Navbar />
       <Home />
+      <Footer />
     </div>
   );
 }
