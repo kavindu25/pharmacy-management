@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/images/logo-transparent.png";
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const mobileMenuClickHandler = () => {
+    setMobileMenuOpen((preState) => setMobileMenuOpen(!preState));
+  };
   return (
     <nav className="navbar navbar-expand-lg px-5 py-4 bg-primary sticky-top ">
       <div className="container-fluid d-flex justify-content-between">
         <div className="">
           <a className="navbar-brand " href="/">
-            <img src={logo} alt="logo" className="" style={{width:'200px', height:'55px'}} />
+            <img
+              src={logo}
+              alt="logo"
+              className=""
+              style={{ width: "200px", height: "55px" }}
+            />
           </a>
         </div>
         <div>

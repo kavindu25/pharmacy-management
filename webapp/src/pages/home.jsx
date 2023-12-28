@@ -9,7 +9,6 @@ import sectionImgTwo from "../assets/images/section-img-2.png";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <section className="position-relative">
         <img
           src={bgImg}
@@ -99,7 +98,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
