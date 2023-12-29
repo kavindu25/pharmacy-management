@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo-transparent.png";
+import mobileMenuIcon from "../../assets/images/mobile_nav_icon.png";
 import classes from "./NavBar.module.css";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const mobileMenuClickHandler = () => {
-    setMobileMenuOpen((preState) => setMobileMenuOpen(!preState));
+    setMobileMenuOpen(!mobileMenuOpen);
+    console.log(mobileMenuOpen)
   };
   return (
     <nav className="navbar navbar-expand-lg px-5 py-4 bg-primary sticky-top">
@@ -20,7 +22,15 @@ const Navbar = () => {
             style={{ width: "200px", height: "55px" }}
           />
         </div>
-        <div className="nav-elements">
+        <button className="menu-icon btn btn-primary" onClick={mobileMenuClickHandler}>
+          <img
+            src={mobileMenuIcon}
+            alt="mobile menu"
+            className=""
+            style={{ width: "50px", height: "50px" }}
+          />
+        </button>
+        <div className={`nav-elements ${mobileMenuOpen && "active"}`}>
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item p-3">
               <NavLink to="/" className="nav-link text-white">
