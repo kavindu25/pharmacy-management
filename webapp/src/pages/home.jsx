@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar/Navbar";
 import Footer from "../components/Footer";
 import CustomButton from "../components/CustomButton";
 import bgImg from "../assets/images/bg.png";
