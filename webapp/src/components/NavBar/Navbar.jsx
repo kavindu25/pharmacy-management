@@ -22,15 +22,15 @@ const Navbar = () => {
             style={{ width: "200px", height: "55px" }}
           />
         </div>
-        <button className="menu-icon btn btn-primary" onClick={mobileMenuClickHandler}>
+        <div className={`${classes.menuIcon}`} onClick={mobileMenuClickHandler}>
           <img
             src={mobileMenuIcon}
             alt="mobile menu"
-            className=""
+            //className=""
             style={{ width: "50px", height: "50px" }}
           />
-        </button>
-        <div className={`nav-elements ${mobileMenuOpen && "active"}`}>
+        </div>
+        <div className={`${classes.navElements} ${mobileMenuOpen && "active"}`}>
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item p-3">
               <NavLink to="/" className="nav-link text-white">
