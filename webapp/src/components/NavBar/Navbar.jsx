@@ -12,7 +12,7 @@ const Navbar = () => {
     console.log(mobileMenuOpen)
   };
   return (
-    <nav className="navbar navbar-expand-lg px-5 py-4 bg-primary sticky-top">
+    <nav className={`${classes.navbar}  px-5 py-4 bg-primary sticky-top`}>
       <div className="container-fluid d-flex justify-content-between">
         <div className="logo">
           <img
@@ -26,34 +26,33 @@ const Navbar = () => {
           <img
             src={mobileMenuIcon}
             alt="mobile menu"
-            //className=""
             style={{ width: "50px", height: "50px" }}
           />
         </div>
         <div className={`${classes.navElements} ${mobileMenuOpen && "active"}`}>
-          <ul className="navbar-nav mb-2 mb-lg-0">
-            <li className="nav-item p-3">
-              <NavLink to="/" className="nav-link text-white">
+          <ul className=" mb-2 mb-lg-0">
+            <li className=" p-3">
+              <NavLink to="/" className="text-white">
                 ABOUT US
               </NavLink>
             </li>
-            <li className="nav-item p-3">
-              <NavLink to="/" className="nav-link text-white">
+            <li className=" p-3">
+              <NavLink to="/" className="text-white">
                 SERVICES
               </NavLink>
             </li>
-            <li className="nav-item p-3">
-              <NavLink to="/" className="nav-link text-white">
+            <li className=" p-3">
+              <NavLink to="/" className="text-white">
                 CONTACT US
               </NavLink>
             </li>
-            <li className="nav-item p-3">
-              <NavLink to="/about" className="nav-link text-white">
+            <li className=" p-3">
+              <NavLink to="/about" className="text-white">
                 MANAGE ITEMS
               </NavLink>
             </li>
-            <li className="nav-item p-3">
-              <NavLink to="/contact" className="nav-link text-white">
+            <li className=" p-3">
+              <NavLink to="/contact" className="text-white">
                 CREATE INVOICE
               </NavLink>
             </li>
