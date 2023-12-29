@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const mobileMenuClickHandler = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+    setMobileMenuOpen((prevState) => !prevState);
     console.log(mobileMenuOpen)
   };
   return (
